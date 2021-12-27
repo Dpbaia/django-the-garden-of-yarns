@@ -15,8 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from django.views.generic import RedirectView
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('amigurumis/', include('amigurumis.urls')),
     path('admin/', admin.site.urls),
+    # Redirecting the root URL to the amigurumis:
+    path('', RedirectView.as_view(url='amigurumis/', permanent = False)),
 ]
+
+# Allows creation of static files
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
