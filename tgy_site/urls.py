@@ -18,6 +18,7 @@ from django.urls import include, path
 from django.views.generic import RedirectView
 from django.conf import settings
 from django.conf.urls.static import static
+from amigurumis import views
 
 urlpatterns = [
     path('amigurumis/', include('amigurumis.urls')),

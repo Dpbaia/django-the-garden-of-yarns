@@ -10,6 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 from dotenv import load_dotenv, find_dotenv
 
 from pathlib import Path
@@ -42,7 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # If you create an application inside of the amigurumis, MUST add it here
-    'amigurumis.apps.AmigurumisConfig'
+    'amigurumis.apps.AmigurumisConfig',
+    'cloudinary'
 ]
 
 MIDDLEWARE = [
@@ -131,3 +135,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+cloudinary.config( 
+  cloud_name = os.environ['CLOUD_NAME'], 
+  api_key = os.environ["CLOUD_API_KEY"], 
+  api_secret = os.environ["CLOUD_API_SECRET"] 
+)
