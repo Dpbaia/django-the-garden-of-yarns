@@ -1,17 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Photoapp</title>
-    </head>
-    <body>
-        <h2>Cloudinary Fish</h2>
-        <!-- loop through all the images -->
-        {% for pic in photo %}
-        <h2>{{pic.title}}</h2>
-            <img src="{{pic.image.url}}" alt="fish">
-        {% endfor %}
-    </body>
-</html>
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>The Garden of Yarns</h1>
+    <p>Number of amigurumis:</p> {{num_amigurumis}}
+    <h2>Latest amigurumis:</h2>
+    <p>{{ amigurumi_images }}</p>
+    <!-- loop through all the images -->
+    <!-- {% for pic in photo %}
+    <h2>{{pic.title}}</h2>
+        <img src="{{pic.image.url}}" alt="fish">
+    {% endfor %} -->
+    <!-- {% for amigurumi in lastest_amigurumis %} -->
+        <!-- Then find the images belonging to them, and print only the first one. To display in the first page! -->
+    <!-- {% endfor %} --> 
+{% endblock %}

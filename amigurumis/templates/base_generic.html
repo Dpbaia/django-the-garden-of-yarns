@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% block title %}<title>The Garden of Yarns</title>{% endblock %}
+        <!-- Add additional CSS in static file -->
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/style.css' %}">
+    </head>
+    <body>
+    {% block sidebar %}<!-- insert default navigation text for every page -->{% endblock %}
+    {% block content %}<!-- default content text (typically empty) -->{% endblock %}
+    </body>
+</html>

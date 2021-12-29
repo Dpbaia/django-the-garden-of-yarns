@@ -23,6 +23,10 @@ class Amigurumi(models.Model):
     def __str__(self):
         return self.name
 
+    # def images(self):
+    # Doesn't work, not sure why 
+    #     return AmigurumiImage.objects.filter(amigurumi=self)
+
 class AmigurumiImage(models.Model):
     amigurumi = models.ForeignKey(Amigurumi, related_name='images', on_delete=models.CASCADE)
     image = CloudinaryField('image')
