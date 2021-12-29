@@ -1,10 +1,14 @@
 {% extends "base_generic.html" %}
+{% load cloudinary %}
 
 {% block content %}
     <h1>The Garden of Yarns</h1>
     <p>Number of amigurumis:</p> {{num_amigurumis}}
     <h2>Latest amigurumis:</h2>
     <p>{{ amigurumi_images }}</p>
+    {% for key, value in amigurumi_images.items %}
+        {% cloudinary value format="png" width=300 height=400 crop="fill" %}
+    {% endfor %}
     <!-- loop through all the images -->
     <!-- {% for pic in photo %}
     <h2>{{pic.title}}</h2>
