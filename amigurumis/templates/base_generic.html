@@ -8,7 +8,9 @@
         <!-- Add additional CSS in static file -->
         {% load static %}
         {% load compress %}
-
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Prompt:wght@200&family=Pushster&display=swap" rel="stylesheet">
         {% compress css %}
         <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/style.css' %}">
         {% endcompress %}
@@ -17,18 +19,18 @@
     {% block navbar %}    
         <div class="navbar">
             <div class="items">
-                <h2>LOGO HERE</h2>
+                <img src="../static/amigurumis/images/logo.png" alt="">
             </div>
             <div class="items selections">
                 <ul>
                     <li>
-                        Todos os trabalhos
+                        All works
                     </li>
                     <li>
-                        Trabalhos autorais
+                        Own recipe
                     </li>
                     <li>
-                        Sobre
+                        About
                     </li>
                 </ul>
             </div>
@@ -53,7 +55,7 @@
             </a>
         </div>
         <div class="items selections container-footerimg">
-            "KIRBY IMAGE HERE"
+            <img src="../static/amigurumis/images/amig3.png" alt="" class="footerimg">
         </div>
     </div>
     {% endblock %}

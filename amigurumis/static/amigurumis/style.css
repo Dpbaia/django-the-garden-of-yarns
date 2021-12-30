@@ -1,9 +1,36 @@
 /* Organise into different files later! */
 
 body{
-    background-color: #FFE5D9;
+    background-color: #B1DDBD;
     margin: 0;
 }
+
+h1{
+    font-family: 'Pushster', cursive;
+    font-size: 80px;
+    margin: 0px;
+    color: #6b4f57;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+h2{
+    font-family: 'Pacifico', cursive;
+    color: #6B4F57;
+    text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+}
+
+p{
+    font-family: 'Prompt', sans-serif;
+}
+
+/* Colours
+brown: #B07156
+green: #B1DDBD
+pink: #FFCAD4
+darkbrown: #6B4F57
+darkpink: #F4ACB7
+white: #F5F5F5
+*/
 
 
 /* Navbar: */
@@ -11,7 +38,6 @@ body{
 .navbar {
     display: flex;
     justify-content: space-between;
-    background: #FFCAD4;
     height: 80px;
 }
 
@@ -76,6 +102,45 @@ ul li{
 }
 
 .footerimg{
-    height: 300px;
-    width: 300px;
+    height: 240px;
+}
+
+
+/* Homepage */
+
+.banner{
+    background-image: url("https://images.unsplash.com/photo-1538437616090-64c780652422?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    margin: 0px 56px;
+    padding: 0px 80px;
+    height: 600px;
+    background-size: cover;
+    border-radius: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner img{
+    height: 400px;
+}
+
+.banner-writing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner h1{
+
+}
+
+.banner h2{
+
+}
+
+.banner a{
+    background-color: #F5F5F5;
+    padding: 32px 100px;
+    border-radius: 60px;
+    text-decoration: none;
 }

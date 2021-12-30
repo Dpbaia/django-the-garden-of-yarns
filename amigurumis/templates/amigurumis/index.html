@@ -2,11 +2,20 @@
 {% load cloudinary %}
 
 {% block content %}
-    <h1>The Garden of Yarns</h1>
+    <div class="banner">
+        <div class="banner-writing">
+            <h1>The Garden of Yarns</h1>
+            <h2>Amigurumis made with love</h2>
+            <a href="#">See my works</a>
+        </div>
+        <div class="bannerimage">
+            <img src="../../static/amigurumis/images/amig2.png">
+        </div>
+    </div>
     <p>Number of amigurumis:</p> {{num_amigurumis}}
     <h2>Latest amigurumis:</h2>
     <p>{{ amigurumi_images }}</p>
     {% for key, value in amigurumi_images.items %}
-        {% cloudinary value format="png" width=300 height=400 crop="fill" %}
+        {% cloudinary value format="png" height=300 width="280" crop="fit" %}
     {% endfor %}
 {% endblock %}
