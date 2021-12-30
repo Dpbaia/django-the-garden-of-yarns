@@ -9,12 +9,4 @@
     {% for key, value in amigurumi_images.items %}
         {% cloudinary value format="png" width=300 height=400 crop="fill" %}
     {% endfor %}
-    <!-- loop through all the images -->
-    <!-- {% for pic in photo %}
-    <h2>{{pic.title}}</h2>
-        <img src="{{pic.image.url}}" alt="fish">
-    {% endfor %} -->
-    <!-- {% for amigurumi in lastest_amigurumis %} -->
-        <!-- Then find the images belonging to them, and print only the first one. To display in the first page! -->
-    <!-- {% endfor %} --> 
 {% endblock %}

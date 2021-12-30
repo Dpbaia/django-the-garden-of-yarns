@@ -1,3 +1,81 @@
+/* Organise into different files later! */
+
 body{
-    background-color: aquamarine;
+    background-color: #FFE5D9;
+    margin: 0;
+}
+
+
+/* Navbar: */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background: #FFCAD4;
+    height: 80px;
+}
+
+.navbar div {
+    margin: 0px 56px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar img{
+    height: 80px;
+}
+
+ul{
+    padding: 0px;
+    list-style-type: none;
+    display: flex;
+    
+}
+
+ul li{
+    margin: 0px 16px;
+}
+
+/* FOOTER */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background: #FFCAD4;
+    height: 80px;
+}
+
+.footer div {
+    margin: 0px 56px;
+}
+
+.footer .follow{
+    display: flex;
+    align-items: center;
+}
+
+.footer .container-footerimg{
+    display: flex;
+    align-items: flex-end;
+}
+
+.icon {
+    height: 24px;
+    width: 24px;
+    margin: 8px;
+}
+
+.follow a img{
+    filter: opacity(30%);
+    transition: 0.5s;
+    
+}
+
+.follow a img:hover{
+    filter: opacity(100%);
+}
+
+.footerimg{
+    height: 300px;
+    width: 300px;
 }

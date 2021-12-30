@@ -1,15 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {% block title %}<title>The Garden of Yarns</title>{% endblock %}
         <!-- Add additional CSS in static file -->
         {% load static %}
+        {% load compress %}
+
+        {% compress css %}
         <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/style.css' %}">
+        {% endcompress %}
     </head>
     <body>
-    {% block sidebar %}<!-- insert default navigation text for every page -->{% endblock %}
+    {% block navbar %}    
+        <div class="navbar">
+            <div class="items">
+                <h2>LOGO HERE</h2>
+            </div>
+            <div class="items selections">
+                <ul>
+                    <li>
+                        Todos os trabalhos
+                    </li>
+                    <li>
+                        Trabalhos autorais
+                    </li>
+                    <li>
+                        Sobre
+                    </li>
+                </ul>
+            </div>
+        </div>
+    {% endblock %}
     {% block content %}<!-- default content text (typically empty) -->{% endblock %}
+    {% block footer %}
+    <div class="footer">
+        <div class="items follow">
+            Follow us: 
+            <a href="https://www.etsy.com/shop/thegardenofyarns">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174847.png" alt="etsy" class="icon">
+            </a>
+            <a href="https://www.instagram.com/thegardenofyarns/">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="instagram" class="icon">
+            </a>
+            <a href="https://pt-br.facebook.com/thegardenofyarns/">
+                <img src="https://cdn-icons-png.flaticon.com/512/59/59439.png" alt="facebook" class="icon">
+            </a>
+            <a href="https://www.elo7.com.br/thegardenofyarns">
+                <img src="https://theme.zdassets.com/theme_assets/121966/83b9c2815f9ecb66b92d450d6f20752321b8ea78.png" alt="elo7" class="icon">
+            </a>
+        </div>
+        <div class="items selections container-footerimg">
+            "KIRBY IMAGE HERE"
+        </div>
+    </div>
+    {% endblock %}
     </body>
 </html>
