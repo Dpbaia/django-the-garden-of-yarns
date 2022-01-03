@@ -14,14 +14,13 @@ h1{
     font-family: 'Pushster', cursive;
     font-size: 80px;
     margin: 0px;
-    color: #6b4f57;
+    color: #a35757;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 h2{
     font-family: 'Pacifico', cursive;
-    color: #6B4F57;
-    text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+    color: #a35757;
 }
 
 p, li, a, div{
@@ -109,6 +108,7 @@ ul li{
 
 .footerimg{
     height: 240px;
+    z-index: 1;
 }
 
 
@@ -153,23 +153,30 @@ ul li{
     margin: 48px 0px 80px 0px ;
 }
 
+.home-2fr{    
+    grid-template-columns: 1fr 1fr;
+}
 
 
 /* Buttons */
 
-.btn-banner{
+.btn-banner {
     color: #B1DDBD;
     text-decoration: underline;
     font-size: 56px;
-    text-shadow: 0px 4px 4px rgb(0 0 0 / 50%);
+    box-shadow: 4px 8px 9px 2px rgb(0 0 0 / 50%);
     margin: 50px 0px 0px 0px;
     transition: 0.5s;
+    font-family: 'Pushster', cursive;
+    background-color: #F5F5F5;
+    padding: 16px;
+    border-radius: 48px;
+    text-align: center;
 }
 
-.btn-banner:hover{
-    color: white;
-    text-decoration: underline;
-    text-shadow: none;
+.btn-banner:hover {
+    box-shadow: none;
+    transform: translate(10px, 10px);
 }
 
 /* Card */
