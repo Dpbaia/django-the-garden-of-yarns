@@ -1,8 +1,13 @@
 /* Organise into different files later! */
 
-body{
+html{
     background-color: #B1DDBD;
-    margin: 0;
+}
+
+body{
+    background-color: #F5F5F5;
+    margin: 32px 32px 0px 32px;
+    border-radius: 48px;
 }
 
 h1{
@@ -19,7 +24,7 @@ h2{
     text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
 }
 
-p{
+p, li, a, div{
     font-family: 'Prompt', sans-serif;
 }
 
@@ -67,8 +72,9 @@ ul li{
 .footer {
     display: flex;
     justify-content: space-between;
-    background: #FFCAD4;
+    background: #B1DDBD;
     height: 80px;
+    
 }
 
 .footer div {
@@ -110,7 +116,7 @@ ul li{
 
 .banner{
     background-image: url("https://images.unsplash.com/photo-1538437616090-64c780652422?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
-    margin: 0px 56px;
+    margin: 24px 56px;
     padding: 0px 80px;
     height: 600px;
     background-size: cover;
@@ -121,7 +127,7 @@ ul li{
 }
 
 .banner img{
-    height: 400px;
+    height: 500px;
 }
 
 .banner-writing {
@@ -130,17 +136,63 @@ ul li{
     align-items: center;
 }
 
-.banner h1{
-
+.home-examples{
+    margin: 24px 56px;
 }
 
-.banner h2{
-
+.home-examples h2{
+    text-align: center;
+    background-color: #B1DDBD;
+    border-radius: 48px;
 }
 
-.banner a{
-    background-color: #F5F5F5;
-    padding: 32px 100px;
-    border-radius: 60px;
-    text-decoration: none;
+.home-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 48px;
+    margin: 48px 0px 80px 0px ;
 }
+
+
+
+/* Buttons */
+
+.btn-banner{
+    color: #B1DDBD;
+    text-decoration: underline;
+    font-size: 56px;
+    text-shadow: 0px 4px 4px rgb(0 0 0 / 50%);
+    margin: 50px 0px 0px 0px;
+    transition: 0.5s;
+}
+
+.btn-banner:hover{
+    color: white;
+    text-decoration: underline;
+    text-shadow: none;
+}
+
+/* Card */
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 16px rgb(0 0 0 / 50%);
+    height: 400px;
+    border-radius: 48px;
+    background-color: #B1DDBD;
+}
+
+.card img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 48px;
+    transition: 1s;
+}
+
+.card img:hover {
+    border-radius: 400px;
+}
+

@@ -5,7 +5,7 @@ from amigurumis.models import Amigurumi, AmigurumiImage
 
 def index(request):
     # imports photos and save it in database
-    lastest_amigurumis = Amigurumi.objects.all()[:3]
+    lastest_amigurumis = Amigurumi.objects.all().order_by('-pk')[:3]
     num_amigurumis = Amigurumi.objects.all().count()
     ami_images = {}
     # Get all the latest amigurumis
