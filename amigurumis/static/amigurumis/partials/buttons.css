@@ -1,0 +1,18 @@
+.btn-banner {
+    color: #B1DDBD;
+    text-decoration: underline;
+    font-size: 56px;
+    box-shadow: 4px 8px 9px 2px rgb(0 0 0 / 50%);
+    margin: 50px 0px 0px 0px;
+    transition: 0.5s;
+    font-family: 'Pushster', cursive;
+    background-color: #F5F5F5;
+    padding: 16px;
+    border-radius: 48px;
+    text-align: center;
+}
+
+.btn-banner:hover {
+    box-shadow: none;
+    transform: translate(10px, 10px);
+}

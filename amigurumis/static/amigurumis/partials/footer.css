@@ -1,0 +1,42 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background: #B1DDBD;
+    height: 80px;
+    
+}
+
+.footer div {
+    margin: 0px 56px;
+}
+
+.footer .follow{
+    display: flex;
+    align-items: center;
+}
+
+.footer .container-footerimg{
+    display: flex;
+    align-items: flex-end;
+}
+
+.icon {
+    height: 24px;
+    width: 24px;
+    margin: 8px;
+}
+
+.follow a img{
+    filter: opacity(30%);
+    transition: 0.5s;
+    
+}
+
+.follow a img:hover{
+    filter: opacity(100%);
+}
+
+.footerimg{
+    height: 240px;
+    z-index: 1;
+}
