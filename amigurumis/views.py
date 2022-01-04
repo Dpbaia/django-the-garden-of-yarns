@@ -1,6 +1,7 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, get_object_or_404
+from django.http import HttpResponse, Http404
 from amigurumis.models import Amigurumi, AmigurumiImage
+from django.views import generic
 
 
 def index(request):
@@ -22,8 +23,36 @@ def index(request):
     return render(request, 'amigurumis/index.html', context=context)
 
 def list(request, authorship):
-    # GOTTA ADD PROTECTION TO THE AUTHORSHIP! SOMETHING LIKE ONLY RESPOND IF TRUE OR FALSE, ELSE THROW 404
-    all_amigurumis = Amigurumi.objects.all()
-    return render(request, 'amigurumis/list.html')
+    if authorship == "false":
+        all_amigurumis = Amigurumi.objects.all()
+        context={
+            'name': all_amigurumis.name,
+            'amigurumi_images': 'placeholder',
+            'page_name': 'All Works',
+        }
+        return render(request, 'amigurumis/list.html', context=context)
+    elif authorship == "true":
+        context={
+            'name': 'placeholder',
+            'amigurumi_images': 'placeholder',
+            'page_name': 'Own Recipes',
+        }
+        return render(request, 'amigurumis/list.html', context=context)
+    else:
+        raise Http404
+
+class AmigurumiListView(generic.ListView):
+    model = Amigurumi
+    # Overriding the default configurations:
+    # context_object_name = 'my_book_list'   # your own name for the list as a template variable
+    # queryset = Book.objects.filter(title__icontains='war')[:5] # Get 5 books containing the title war
+    # template_name = 'books/my_arbitrary_template_name_list.html'  # Specify your own template name/location
+
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get the context
+        context = super(AmigurumiListView, self).get_context_data(**kwargs)
+        # Create any data and add it to the context
+        context['page_name'] = 'All Works'
+        return context
 
 # Create your views here.

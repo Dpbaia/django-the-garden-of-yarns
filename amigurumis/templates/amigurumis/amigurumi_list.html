@@ -1,0 +1,21 @@
+{% extends "base_generic.html" %}
+{% load cloudinary %}
+
+{% block content %}
+  <h1>{{page_name}}</h1>
+  {% if amigurumi_list %}
+  <ul>
+    {% for amigurumi in amigurumi_list %}
+      <li>
+        <a href="#">
+        {% cloudinary amigurumi.images.first.image format="png" height=300 width="280" crop="fit" %}
+        {{ amigurumi.name }}
+        </a>
+        <!-- Substitute above for the corresponding to  amigurumi.get_absolute_url  when it's done! -->
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no books in the library.</p>
+  {% endif %}
+{% endblock %}

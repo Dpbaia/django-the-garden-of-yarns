@@ -19,7 +19,7 @@
     {% block navbar %}    
         <div class="navbar">
             <div class="items">
-                <a href="#">
+                <a href="{% url 'amigurumis:index' %}">
                     <img src="{% static '/amigurumis/images/logo.png' %}" alt="">
                 </a>
             </div>
@@ -63,7 +63,9 @@
             </a>
         </div>
         <div class="items selections container-footerimg">
-            <img src="{% static '/amigurumis/images/amig3.png' %}" alt="" class="footerimg">
+            <a href="#">
+                <img src="{% static '/amigurumis/images/amig3.png' %}" alt="" class="footerimg">
+            </a>
         </div>
     </div>
     {% endblock %}
