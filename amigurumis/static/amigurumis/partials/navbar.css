@@ -12,6 +12,8 @@
 
 .navbar img{
     height: 80px;
+    /* Since putting a link adds a space below it: */
+    vertical-align: middle;
 }
 
 ul{
@@ -23,4 +25,15 @@ ul{
 
 ul li{
     margin: 0px 16px;
+}
+
+ul li a{
+    text-decoration: none;
+    transition: 0.7s;
+}
+
+ul li a:hover{
+    background-color: #B1DDBD;
+    padding: 8px;
+    border-radius: 48px;
 }

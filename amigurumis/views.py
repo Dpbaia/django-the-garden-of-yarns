@@ -21,4 +21,9 @@ def index(request):
     }
     return render(request, 'amigurumis/index.html', context=context)
 
+def list(request, authorship):
+    # GOTTA ADD PROTECTION TO THE AUTHORSHIP! SOMETHING LIKE ONLY RESPOND IF TRUE OR FALSE, ELSE THROW 404
+    all_amigurumis = Amigurumi.objects.all()
+    return render(request, 'amigurumis/list.html')
+
 # Create your views here.

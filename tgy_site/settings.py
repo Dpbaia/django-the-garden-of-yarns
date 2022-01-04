@@ -58,6 +58,12 @@ STATICFILES_FINDERS = (
     'compressor.finders.CompressorFinder',
 )
 
+# Tell another place for it to look for statics!
+
+STATICFILES_DIRS = [
+    BASE_DIR / "amigurumis/static",
+]
+
 COMPRESS_PRECOMPILERS = (
     ("text/x-scss", 'sass --scss'),
 )
