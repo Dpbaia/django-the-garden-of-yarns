@@ -9,7 +9,7 @@ urlpatterns = [
     path('', views.index, name='index'),
 
     # CREATING A GENERIC VIEW:
-    path('all/', views.AmigurumiListView.as_view(), name='all'),
+    # path('<str:authorship>/', views.AmigurumiListView.as_view(), name='list'),
 
     # !
     path('<str:authorship>/', views.list, name='list'),
