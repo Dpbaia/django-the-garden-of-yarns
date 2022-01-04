@@ -3,3 +3,8 @@
 @import "homepage.css";
 @import "buttons.css";
 @import "cards.css";
+@import "list.css";
+
+.txt-centered{
+    text-align: center;
+}

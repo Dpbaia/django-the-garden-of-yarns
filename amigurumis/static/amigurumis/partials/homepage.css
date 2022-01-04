@@ -1,5 +1,5 @@
 .banner{
-    background-image: url("https://images.unsplash.com/photo-1538437616090-64c780652422?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-image: url("https://images.unsplash.com/photo-1615234337800-cec7a528b524?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
     margin: 24px 56px;
     padding: 0px 80px;
     height: 600px;
@@ -20,7 +20,7 @@
     align-items: center;
 }
 
-.home-examples{
+.margin{
     margin: 24px 56px;
 }
 
@@ -34,7 +34,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 48px;
-    margin: 48px 0px 80px 0px ;
+    margin: 48px 0px 80px 0px;
+}
+
+.container-lrgmargin{
+    margin: 48px 0px 148px 0px;
 }
 
 .home-2fr{    

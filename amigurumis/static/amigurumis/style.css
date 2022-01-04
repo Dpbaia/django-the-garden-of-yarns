@@ -16,13 +16,13 @@ h1{
     font-family: 'Pushster', cursive;
     font-size: 80px;
     margin: 0px;
-    color: #a35757;
+    color: #3a5f44;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 h2{
     font-family: 'Pacifico', cursive;
-    color: #a35757;
+    color: #3a5f44;
 }
 
 p, li, div{
@@ -36,4 +36,6 @@ pink: #FFCAD4
 darkbrown: #6B4F57
 darkpink: #F4ACB7
 white: #F5F5F5
+
+darkgreen: ##3a5f44
 */

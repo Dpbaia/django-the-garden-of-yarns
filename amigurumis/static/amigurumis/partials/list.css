@@ -1,0 +1,8 @@
+.list-container{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.list-h1{
+    background-color: #B1DDBD;
+    border-radius: 48px;
+}

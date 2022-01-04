@@ -6,6 +6,7 @@
     height: 400px;
     border-radius: 48px;
     background-color: #B1DDBD;
+    transition: 0.7s;
 }
 
 .card img{
@@ -13,9 +14,25 @@
     height: 100%;
     width: 100%;
     border-radius: 48px;
-    transition: 1s;
 }
 
-.card img:hover {
-    border-radius: 400px;
+.card:hover {
+    box-shadow: 1px 1px 4px rgb(0 0 0 / 50%);
+    transform: translate(10px, 10px);
+}
+
+.list-card{
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: 0.7s;
+    height: 240px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #3a5f44;
+}
+
+.list-card img{
+    height: 83%;
+    border-radius: 48px 48px 0px 0px;
+    margin: 0px 0px 8px 0px;
 }
