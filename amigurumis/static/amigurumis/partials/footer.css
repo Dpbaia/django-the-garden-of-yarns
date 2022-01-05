@@ -1,9 +1,8 @@
 .footer {
     display: flex;
     justify-content: space-between;
-    background: #B1DDBD;
+    background: #3a5f44;
     height: 80px;
-    
 }
 
 .footer div {

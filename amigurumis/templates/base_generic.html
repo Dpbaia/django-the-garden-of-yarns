@@ -4,13 +4,14 @@
         
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
         {% block title %}<title>The Garden of Yarns</title>{% endblock %}
         <!-- Add additional CSS in static file -->
         {% load static %}
         {% load compress %}
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Prompt:wght@200&family=Pushster&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Pacifico&family=Prompt:wght@200&family=Pushster&family=Indie+Flower&family=Prompt:wght@200&display=swap" rel="stylesheet">
         {% compress css %}
         <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/style.css' %}">
         {% endcompress %}
@@ -25,7 +26,7 @@
             </div>
             <div class="items selections">
                 <ul>
-                    <li>
+                    <!-- <li>
                         <a href="{% url 'amigurumis:list' 'false' %}">
                             All works
                         </a>
@@ -34,7 +35,7 @@
                         <a href="{% url 'amigurumis:list' 'true' %}">
                             Own recipe
                         </a>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="#">
                             About

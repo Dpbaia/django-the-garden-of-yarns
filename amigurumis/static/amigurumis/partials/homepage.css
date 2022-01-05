@@ -1,17 +1,16 @@
 .banner{
-    background-image: url("https://images.unsplash.com/photo-1615234337800-cec7a528b524?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
-    margin: 24px 56px;
+    margin: 24px 56px 180px 50px;
     padding: 0px 80px;
-    height: 600px;
-    background-size: cover;
-    border-radius: 48px;
+    height: 75vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: rgba(177, 221, 189, 0.8);
+    box-shadow: 8px 8px 16px 0px rgb(0 0 0 / 30%);
 }
 
 .banner img{
-    height: 500px;
+    height: 70vh;
 }
 
 .banner-writing {
@@ -24,10 +23,8 @@
     margin: 24px 56px;
 }
 
-.home-examples h2{
-    text-align: center;
-    background-color: #B1DDBD;
-    border-radius: 48px;
+.container-lrgmargin{
+    margin: 48px 0px 148px 0px;
 }
 
 .home-container{
@@ -37,9 +34,38 @@
     margin: 48px 0px 80px 0px;
 }
 
-.container-lrgmargin{
-    margin: 48px 0px 148px 0px;
+.home-links{
+    position: absolute;
+    bottom: 0vh;
+    left: 14vw;
 }
+
+.homel{
+    background-color: rgba(245, 245, 245, 1);
+    border-radius: 48px 0px 48px 0px;
+    text-align: center;
+    padding: 8px 4px;
+    box-shadow: 4px 8px 8px 2px rgb(0 0 0 / 50%);
+    transition: 0.7s;
+}
+
+.homel:hover {
+    box-shadow: none;
+    transform: translate(10px, 10px);
+}
+
+
+
+
+
+
+.home-examples h2{
+    text-align: center;
+    background-color: #B1DDBD;
+    border-radius: 48px;
+}
+
+
 
 .home-2fr{    
     grid-template-columns: 1fr 1fr;
