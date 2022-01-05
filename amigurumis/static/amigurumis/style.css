@@ -45,3 +45,79 @@ white: #F5F5F5
 
 darkgreen: ##3a5f44
 */
+
+/* Media Queries */
+
+@media only screen and (max-width: 1500px) {
+    .list-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .list-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body{
+        padding: 0px 0px 4vh 0px;
+    }
+
+    .banner img {
+        height: auto;
+        width: 15vw;
+    }
+
+    .banner {
+        height: 40vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 16px 48px;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .home-links {
+        display: flex;
+        position: relative;
+        left: 0px;
+        margin: 16px 48px;
+        flex-direction: column;
+        gap: 4vmin;
+    }
+
+    h2 {
+        font-size: 12px;
+    }
+
+    .footer{
+        font-size: 12px;
+        display: none;
+    }
+
+    .navbar img{
+        height: 32px;
+    }
+
+    .list-container {
+        grid-template-columns: 1fr;
+        grid-gap: 5vh;
+        margin: 48px 0px 0px 0px;
+    }
+
+    .list-card {
+        width: 60vw;
+        height: 40vh;
+    }
+
+    .list-name {
+        font-size: 12px;
+        padding: 8px 0px;
+    }
+}
+
