@@ -86,9 +86,11 @@ darkgreen: ##3a5f44
         display: flex;
         position: relative;
         left: 0px;
+        bottom: 0px;
         margin: 16px 48px;
         flex-direction: column;
         gap: 4vmin;
+        width: auto;
     }
 
     h2 {
@@ -118,6 +120,10 @@ darkgreen: ##3a5f44
     .list-name {
         font-size: 12px;
         padding: 8px 0px;
+    }
+
+    .homel{
+        min-height: 56px;
     }
 }
 
