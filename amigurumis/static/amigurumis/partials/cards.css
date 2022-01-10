@@ -39,7 +39,7 @@
     transform: translate(10px, 10px);
 }
 
-.list-card img{
+.img-fillfit{
     object-fit: cover;
     height: 100%;
     width: 100%;

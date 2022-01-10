@@ -47,7 +47,10 @@ def detail(request, pk):
     return render(request, 'amigurumis/amigurumi_detail.html', context = context)
 
 def about(request):
-    return render(request, 'amigurumis/about.html')
+    context={
+        
+    }
+    return render(request, 'amigurumis/about.html', context = context)
 
 def socials(request):
     return render(request, 'amigurumis/socials.html')

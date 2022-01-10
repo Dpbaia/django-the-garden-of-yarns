@@ -4,6 +4,8 @@
 @import "buttons.css";
 @import "cards.css";
 @import "list.css";
+@import "about.css";
+
 
 .txt-centered{
     text-align: center;

@@ -9,7 +9,7 @@
             {% for amigurumi in amigurumi_list %}
                 <a href="{{ amigurumi.get_absolute_url }}" class="list-link">
                     <div class="list-card">
-                        {% cloudinary amigurumi.images.first.image format="png" height=300 width="280" crop="fit" %}
+                        {% cloudinary amigurumi.images.first.image format="png" height=300 width="280" crop="fit" class="img-fillfit"%}
                         <div class="list-name">
                             {{ amigurumi.name }}
                         </div>
