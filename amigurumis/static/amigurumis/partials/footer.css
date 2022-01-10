@@ -12,6 +12,7 @@
 .footer .follow{
     display: flex;
     align-items: center;
+    color: rgba(177, 221, 189, 1);
 }
 
 .footer .container-footerimg{
@@ -36,6 +37,7 @@
 }
 
 .footerimg{
-    height: 240px;
+    height: 100px;
     z-index: 1;
+    transform: scaleX(-1);
 }

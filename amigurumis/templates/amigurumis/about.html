@@ -6,13 +6,11 @@
         <h1 class="txt-centered list-h1">About</h1>
         <div class="list-container about-container">
             <div>
-                <img src="https://images.unsplash.com/photo-1570840934347-4dc56c98b8ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="" class="img-fillfit">
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a lorem sed eros fermentum faucibus nec at felis. Curabitur vehicula rhoncus velit sed imperdiet. Duis et interdum ante. Suspendisse ut iaculis est, ac tempus sem. Morbi dignissim semper convallis. Phasellus faucibus et lacus vel placerat. Vestibulum at sodales ipsum. Morbi placerat non odio sodales faucibus. Nullam dignissim justo in tortor lacinia, sit amet volutpat velit rutrum. Phasellus pretium pretium dolor, ut mollis neque lobortis et. Sed erat diam, imperdiet a ipsum et, eleifend laoreet arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum aliquet elementum nunc, nec vestibulum erat euismod a. Ut faucibus purus mattis, semper nisi nec, lacinia libero. Aliquam et nisl id ipsum dapibus venenatis.
-
-                Integer pellentesque cursus massa, in congue odio. Integer consequat fringilla metus. Maecenas dui magna, ullamcorper a venenatis quis, elementum ut diam. Morbi elementum neque in commodo facilisis. Ut diam erat, rhoncus vel dictum eget, porta pharetra neque. In pulvinar felis quis pulvinar tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla facilisi. Aenean semper arcu tellus, ut accumsan diam suscipit at. Vestibulum diam odio, dapibus at cursus vitae, euismod quis neque.
+                {% cloudinary about.photo format="png" height=300 width="280" crop="fit" class="img-fillfit"%}
                 
-
+            </div>
+            <p>
+                {{about.description}}
             </p>
         </div>
     </div>

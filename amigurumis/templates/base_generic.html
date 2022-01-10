@@ -26,16 +26,6 @@
             </div>
             <div class="items selections">
                 <ul>
-                    <!-- <li>
-                        <a href="{% url 'amigurumis:list' 'false' %}">
-                            All works
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{% url 'amigurumis:list' 'true' %}">
-                            Own recipe
-                        </a>
-                    </li> -->
                     <li>
                         <a href="{% url 'amigurumis:about' %}">
                             About
@@ -48,6 +38,11 @@
     {% block content %}<!-- default content text (typically empty) -->{% endblock %}
     {% block footer %}
     <div class="footer">
+        <div class="items selections container-footerimg">
+            <a href="#">
+                <img src="{% static '/amigurumis/images/amig3.png' %}" alt="" class="footerimg">
+            </a>
+        </div>
         <div class="items follow">
             Follow us: 
             <a href="https://www.etsy.com/shop/thegardenofyarns" target=”_blank”>
@@ -61,11 +56,6 @@
             </a>
             <a href="https://www.elo7.com.br/thegardenofyarns" target=”_blank”>
                 <img src="https://theme.zdassets.com/theme_assets/121966/83b9c2815f9ecb66b92d450d6f20752321b8ea78.png" alt="elo7" class="icon">
-            </a>
-        </div>
-        <div class="items selections container-footerimg">
-            <a href="#">
-                <img src="{% static '/amigurumis/images/amig3.png' %}" alt="" class="footerimg">
             </a>
         </div>
     </div>

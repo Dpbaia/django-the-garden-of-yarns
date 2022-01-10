@@ -31,6 +31,7 @@ ul li{
 ul li a{
     text-decoration: none;
     transition: 0.7s;
+    font-weight: bolder;
 }
 
 ul li a:hover{

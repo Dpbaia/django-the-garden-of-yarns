@@ -1,18 +1,19 @@
 .about-container{
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 3fr;
 }
 
 .about-container div:first-child{
     text-align: center;
 }
 
-.about-container p{
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-    background-color: rgba(245, 245, 245, 0.9);
+.about-container p {
+    text-shadow: 1px 1px 1px rgb(0 0 0 / 30%);
     padding: 16px;
     border-radius: 8px;
-
+    color: #3a5f44;
+    font-weight: bold;
+    text-align: justify;
 }
 
 .about-container img{

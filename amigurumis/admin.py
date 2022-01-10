@@ -1,6 +1,7 @@
 from django.contrib import admin
 
-from amigurumis.models import Amigurumi, AmigurumiImage
+
+from amigurumis.models import Amigurumi, AmigurumiImage, AboutInfo
 
 # Register your models here.
 
@@ -17,5 +18,11 @@ class AmigurumiAdmin(admin.ModelAdmin):
     list_display = ('name', 'authorship')
     list_filter = ['authorship']
 
+class AboutInfoAdmin(admin.ModelAdmin):
+    list_display = ['description']
+
+    
+
 
 admin.site.register(Amigurumi, AmigurumiAdmin)
+admin.site.register(AboutInfo, AboutInfoAdmin)

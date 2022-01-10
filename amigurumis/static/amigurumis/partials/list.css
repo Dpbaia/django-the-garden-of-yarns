@@ -1,7 +1,7 @@
 .list-container {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin: 48px 0px 160px 0px;
-    background-color: rgba(250,250,250,0.5);
+    margin: 48px 0px;
+    background-color: rgba(177, 221, 189, 0.8);
     padding: 56px 16px;
     border-radius: 48px;
     grid-gap: 56px 16px;

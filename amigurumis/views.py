@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, Http404
-from amigurumis.models import Amigurumi, AmigurumiImage
+from amigurumis.models import Amigurumi, AmigurumiImage, AboutInfo
 from django.views import generic
 
 
@@ -34,7 +34,7 @@ def list(request, authorship):
         authorship_amigurumis = Amigurumi.objects.filter(authorship=True)
         context={
             'amigurumi_list': authorship_amigurumis,
-            'page_name': 'Own Recipes',
+            'page_name': 'My designs',
         }
         return render(request, 'amigurumis/amigurumi_list.html', context=context)
     else:
@@ -48,7 +48,7 @@ def detail(request, pk):
 
 def about(request):
     context={
-        
+        'about': AboutInfo.objects.first(),
     }
     return render(request, 'amigurumis/about.html', context = context)
 
