@@ -1,15 +1,27 @@
 .btn-banner {
-    color: #B1DDBD;
-    text-decoration: underline;
-    font-size: 56px;
+    color: #3a5f44;
     box-shadow: 4px 8px 9px 2px rgb(0 0 0 / 50%);
-    margin: 50px 0px 0px 0px;
     transition: 0.5s;
-    font-family: 'Pushster', cursive;
     background-color: #F5F5F5;
-    padding: 16px;
     border-radius: 48px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+    justify-content: space-evenly;
+}
+
+.btn-banner h3{
+    font-family: 'Handlee', cursive;
+    font-weight: lighter;
+    font-size: 4vw;
+    margin: 0px;
+
+}
+
+.btn-banner p{
+    font-size: 1.5vw;
+    margin: 0px 16px;
 }
 
 .btn-banner:hover {

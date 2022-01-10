@@ -7,7 +7,7 @@
         {% if amigurumi_list %}
         <div class="home-container list-container container-lrgmargin">
             {% for amigurumi in amigurumi_list %}
-                <a href="#" class="list-link">
+                <a href="{{ amigurumi.get_absolute_url }}" class="list-link">
                     <div class="list-card">
                         {% cloudinary amigurumi.images.first.image format="png" height=300 width="280" crop="fit" %}
                         <div class="list-name">
@@ -15,7 +15,6 @@
                         </div>
                     </div>
                 </a>
-                <!-- Substitute above for the corresponding to  amigurumi.get_absolute_url  when it's done! -->
             {% endfor %}
         </div>
         {% else %}

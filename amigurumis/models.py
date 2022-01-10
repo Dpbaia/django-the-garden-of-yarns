@@ -17,15 +17,11 @@ class Amigurumi(models.Model):
     #Methods
     def get_absolute_url(self):
         #NOT WORKING YET, have to replace the model-detail-view with the view yet to be created
-        return reverse('amigurumi-detail', args=[str(self.id)])
+        return reverse('amigurumis:amigurumi-detail', args=[str(self.id)])
 
     # How it displays:
     def __str__(self):
         return self.name
-
-    # def images(self):
-    # Doesn't work, not sure why 
-    #     return AmigurumiImage.objects.filter(amigurumi=self)
 
 class AmigurumiImage(models.Model):
     amigurumi = models.ForeignKey(Amigurumi, related_name='images', on_delete=models.CASCADE)

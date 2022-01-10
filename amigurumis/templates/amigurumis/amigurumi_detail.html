@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+{% load cloudinary %}
+
+{% block content %}
+    <div class="margin">
+        <h1 class="txt-centered list-h1">{{amigurumi}}</h1>
+        <div class="home-container list-container container-lrgmargin">
+            {% for image in amigurumi.images.all %}
+            <!-- Code carrossel here later -->
+                {% cloudinary image.image format="png" height=300 width="280" crop="fit" %}
+            {% endfor %}
+
+        </div>
+    </div>
+{% endblock %}

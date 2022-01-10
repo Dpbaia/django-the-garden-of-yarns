@@ -1,6 +1,6 @@
 .list-container {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin: 48px 0px 200px 0px;
+    margin: 48px 0px 160px 0px;
     background-color: rgba(250,250,250,0.5);
     padding: 56px 16px;
     border-radius: 48px;

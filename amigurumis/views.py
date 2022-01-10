@@ -40,6 +40,18 @@ def list(request, authorship):
     else:
         raise Http404
 
+def detail(request, pk):
+    context={
+        'amigurumi': Amigurumi.objects.get(pk=pk),
+    }
+    return render(request, 'amigurumis/amigurumi_detail.html', context = context)
+
+def about(request):
+    return render(request, 'amigurumis/about.html')
+
+def socials(request):
+    return render(request, 'amigurumis/socials.html')
+
 # class AmigurumiListView(generic.ListView): # Cannot use additional arguments here! But an example of how a generic view would work.
 #     model = Amigurumi
 #     ## Overriding the default configurations:

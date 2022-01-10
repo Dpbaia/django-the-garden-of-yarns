@@ -78,4 +78,7 @@
 
 .home-2fr{    
     grid-template-columns: 1fr 1fr;
+    margin: 48px 0px 176px 0px;
+    grid-gap: 16px;
+    height: 60vh;
 }
