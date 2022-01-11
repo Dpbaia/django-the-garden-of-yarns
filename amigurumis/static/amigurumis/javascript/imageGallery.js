@@ -1,0 +1,1 @@
+console.log("entered image gallery");

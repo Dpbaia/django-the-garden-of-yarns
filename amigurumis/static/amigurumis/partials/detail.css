@@ -7,3 +7,26 @@
     padding: 0px;
     margin: 16px 0px;
 }
+
+.dsp-columns img{
+    padding: 0px;
+}
+
+.slides{
+    display: flex;
+    justify-content: center;
+    height: 70vh;
+}
+
+.slides img{
+    object-fit: fill;
+}
+
+.img-active{
+    padding: 8px 4px !important;
+    box-shadow: none;
+}
+
+.img-active:hover{
+    transform: none;
+}

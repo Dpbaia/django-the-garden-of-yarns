@@ -7,16 +7,20 @@
         <div class="list-container dsp-block">
             <div class="container">
                 <!-- Sliding images! -->
-                <div class="mySlides">
-                      <img src="img_woods_wide.jpg" style="width:100%">
+                <div class="slides">
+                        {% cloudinary amigurumi.images.first.image format="png" height=500 crop="fit" id="slideshow" %}
                 </div>
 
             </div>
+            <!-- The expanding image container -->
             <div class="home-container list-container container-lrgmargin dsp-columns">
-                <!-- The expanding image container -->
                 {% for image in amigurumi.images.all %}
                 <!-- Code carrossel here later -->
-                    {% cloudinary image.image format="png" height=300 width="280" crop="fit" class="img-fillfit img-detail" onclick="myFunction(this);" %}
+                    {% if forloop.first %}
+                        {% cloudinary image.image format="png" crop="fit" height="360" width="360" onclick="changeImage(this);" class="homel img-active"%}
+                    {% else %}
+                        {% cloudinary image.image format="png" crop="fit" height="360" width="360" onclick="changeImage(this);" class="homel" %}
+                    {%endif%}
                 {% endfor %}
             </div>
             {% if amigurumi.url %}
