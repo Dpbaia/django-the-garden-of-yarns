@@ -15,11 +15,22 @@
 .slides{
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 70vh;
 }
 
 .slides img{
     object-fit: fill;
+    border-radius: 8px;
+    height: 100%;
+}
+
+.dsp-columns img:hover, .d-arrow{
+    cursor: pointer;
+}
+
+.slides h2 {
+    font-size: 16vw;
 }
 
 .img-active{
@@ -29,4 +40,9 @@
 
 .img-active:hover{
     transform: none;
+    cursor: default !important;
+}
+
+.d-arrow{
+    padding: 16px;
 }
