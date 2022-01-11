@@ -27,15 +27,3 @@ ul{
 ul li{
     margin: 0px 16px;
 }
-
-ul li a{
-    text-decoration: none;
-    transition: 0.7s;
-    font-weight: bolder;
-}
-
-ul li a:hover{
-    background-color: #B1DDBD;
-    padding: 4px;
-    border-radius: 48px;
-}

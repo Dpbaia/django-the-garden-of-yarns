@@ -1,0 +1,9 @@
+.dsp-block{
+    display: block;
+}
+
+.dsp-columns{
+    background-color: transparent;
+    padding: 0px;
+    margin: 16px 0px;
+}
