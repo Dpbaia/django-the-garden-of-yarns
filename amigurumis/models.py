@@ -7,7 +7,7 @@ from django.utils.html import mark_safe
 # Create your models here.
 class Amigurumi(models.Model):
     #Fields: 
-    name = models.CharField(max_length=50, help_text='Enter name of the amigurumi')
+    name = models.CharField(max_length=50, help_text='Enter name of the amigurumi', blank=False)
     authorship = models.BooleanField(default=False, help_text="If you're the author of the recipe")
     url = models.CharField(max_length=100, help_text='Enter url of the amigurumi', blank=True)
 
