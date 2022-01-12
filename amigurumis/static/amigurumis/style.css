@@ -58,11 +58,39 @@ darkgreen: ##3a5f44
     .list-container {
         grid-template-columns: 1fr 1fr 1fr;
     }
+    .about-container {
+        grid-template-columns: 1fr 1fr;
+        height: 60vh;
+    }
 }
 
 @media only screen and (max-width: 1250px) {
     .list-container {
         grid-template-columns: 1fr 1fr;
+    }
+    .slides{
+        height: auto;
+    }
+
+    .slides img{
+        height: auto;
+        width: auto;
+        max-width: 45vw;
+    }
+
+    .detail-bigimg{
+        width: auto;
+    }
+
+    .btn-banner p {
+        font-size: 2.5vw;
+    }
+}
+
+@media only screen and (max-width: 1020px){
+    .about-container {
+        grid-template-columns: 1fr;
+        height: 60vh;
     }
 }
 
@@ -119,6 +147,18 @@ darkgreen: ##3a5f44
         margin: 48px 0px 0px 0px;
     }
 
+    .about-container{
+        height: 80vh;
+    }
+
+    .about-container p{
+        font-size: 2vw;
+    }
+
+    .dsp-columns{
+        margin: 48px 0px 16px 0px;
+    }
+
     .list-card {
         width: 60vw;
         height: 40vh;
@@ -132,5 +172,20 @@ darkgreen: ##3a5f44
     .homel{
         min-height: 56px;
     }
+
+    .slides h2{
+        font-size: 8vw;
+    }
+
+    body{
+        margin:0px;
+    }
+
 }
 
+@media only screen and (max-width: 500px) {
+    .slides h2 {
+        font-size: 6vw;
+        padding: 0px;
+    }
+}
