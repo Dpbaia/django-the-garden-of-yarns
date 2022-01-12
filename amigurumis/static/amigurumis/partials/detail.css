@@ -3,6 +3,7 @@
 }
 
 .dsp-columns{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     background-color: transparent;
     padding: 0px;
     margin: 16px 0px;
@@ -16,13 +17,13 @@
     display: grid;
     grid-template-columns: 1fr 7fr 1fr;
     justify-items: center;
-    height: 70vh;
+    height: 60vh;
 }
 
 .slides img {
     border-radius: 2%;
     object-fit: cover;
-    height: 70vh;
+    height: 60vh;
     width: auto;
 }
 
@@ -37,6 +38,8 @@
     background: transparent;
     box-shadow: none;
     transition: 0.7;
+    font-weight: lighter;
+    color: #F5F5F5;
 }
 
 .slides h2:hover {
@@ -59,7 +62,7 @@
 
 .detail-bigimg{
     height: 100%;
-    width: 70vh;
+    width: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
