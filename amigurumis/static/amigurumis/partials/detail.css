@@ -13,16 +13,17 @@
 }
 
 .slides{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 7fr 1fr;
+    justify-items: center;
     height: 70vh;
 }
 
-.slides img{
-    object-fit: fill;
-    border-radius: 8px;
-    height: 100%;
+.slides img {
+    border-radius: 2%;
+    object-fit: cover;
+    height: 70vh;
+    width: auto;
 }
 
 .dsp-columns img:hover, .d-arrow{
@@ -31,6 +32,15 @@
 
 .slides h2 {
     font-size: 16vw;
+    margin: 0px;
+    text-shadow: 4px 8px 4px rgb(0 0 0 / 50%);
+    background: transparent;
+    box-shadow: none;
+    transition: 0.7;
+}
+
+.slides h2:hover {
+    text-shadow: none;
 }
 
 .img-active{
@@ -46,3 +56,12 @@
 .d-arrow{
     padding: 16px;
 }
+
+.detail-bigimg{
+    height: 100%;
+    width: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

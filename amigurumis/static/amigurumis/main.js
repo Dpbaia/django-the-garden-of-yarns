@@ -10,14 +10,38 @@
 // });
 
 
-// When you click on the image in the details page, it amplifies on the 
+// When you click on the image in the details page, it amplifies on the slideshow
 function changeImage(param) {
     document.getElementById("slideshow").src = param.src;
     document.querySelector(".img-active").classList.remove("img-active");
     param.classList.add("img-active");
 } 
 
+
+
 // When you click on the arrow, you go to the next or previous 
+
+// General Logic //
+
+
+// Determining who's the next element 
+function arrowChangeImage(nextElementParent, numberImgSlide){
+    if(nextElementParent){
+        // If there IS an immediate next or previous one
+        let nextElement = nextElementParent.firstElementChild
+        changeImage(nextElement)
+    } else if (numberImgSlide){
+        // If there isn't and we're going backwards
+        let nextElement = document.querySelector(`.\\3${numberImgSlide}`).firstElementChild;
+        changeImage(nextElement)
+    } else {
+        // If there isn't, and we're going forwards
+        let nextElement = document.querySelector(".\\31").firstElementChild;
+        changeImage(nextElement)
+    }
+}
+
+// Determines which direction clicking is going
 
 function rightArrowChangeImage(){
     // Get the current active image
@@ -27,17 +51,7 @@ function rightArrowChangeImage(){
     // Get the next step
     let nextElementParent = document.querySelector(`.\\3${nextStep}`);
     // Substitute with the new value 
-    if(nextElementParent){
-        let nextElement = nextElementParent.firstElementChild
-        document.querySelector(".img-active").classList.remove("img-active");
-        nextElement.classList.add("img-active");
-        document.getElementById("slideshow").src = nextElement.src;
-    } else {
-        let nextElement = document.querySelector(".\\31").firstElementChild;
-        document.querySelector(".img-active").classList.remove("img-active");
-        nextElement.classList.add("img-active");
-        document.getElementById("slideshow").src = nextElement.src;
-    }
+    arrowChangeImage(nextElementParent);
 }
 
 function leftArrowChangeImage(){
@@ -48,16 +62,8 @@ function leftArrowChangeImage(){
     // Get the next step
     let nextElementParent = document.querySelector(`.\\3${nextStep}`);
     // Substitute with the new value 
-    if(nextElementParent){
-        let nextElement = nextElementParent.firstElementChild
-        document.querySelector(".img-active").classList.remove("img-active");
-        nextElement.classList.add("img-active");
-        document.getElementById("slideshow").src = nextElement.src;
-    } else {
-        let numberImgSlide = document.getElementsByClassName("img-slide").length
-        let nextElement = document.querySelector(`.\\3${numberImgSlide}`).firstElementChild;
-        document.querySelector(".img-active").classList.remove("img-active");
-        nextElement.classList.add("img-active");
-        document.getElementById("slideshow").src = nextElement.src;
-    }
+    let numberImgSlide = document.getElementsByClassName("img-slide").length
+    arrowChangeImage(nextElementParent, numberImgSlide)
 }
+
+
