@@ -8,7 +8,7 @@
             <div class="container">
                 <!-- Sliding images! -->
                 <div class="slides">
-                        <h2 class="d-arrow" id="left-arrow"><</h2>
+                        <h2 class="d-arrow" id="left-arrow" onclick="leftArrowChangeImage();"><</h2>
                         {% cloudinary amigurumi.images.first.image format="png" height=500 crop="fit" id="slideshow" %}
                         <h2 class="d-arrow" id="right-arrow" onclick="rightArrowChangeImage();">></h2>
                 </div>
@@ -20,11 +20,11 @@
                 <!-- Code carrossel here later -->
                     {% if forloop.first %}
                         <div class={{forloop.counter}}>
-                            {% cloudinary image.image format="png" crop="fit" height="360" width="360" onclick="changeImage(this);" class="homel img-active" %}
+                            {% cloudinary image.image format="png" crop="fit" height="360" width="360" onclick="changeImage(this);" class="homel img-active img-slide" %}
                         </div>
                     {% else %}
                         <div class={{forloop.counter}}>
-                            {% cloudinary image.image format="png" crop="fit" height="360" width="360" onclick="changeImage(this);" class="homel" %}
+                            {% cloudinary image.image format="png" crop="fit" height="360" width="360" onclick="changeImage(this);" class="homel img-slide" %}
                         </div>
                     {%endif%}
                 {% endfor %}
