@@ -75,11 +75,44 @@
     border-radius: 48px;
 }
 
-
-
 .home-2fr{    
     grid-template-columns: 1fr 1fr;
     margin: 48px 0px;
     grid-gap: 16px;
     height: 60vh;
+}
+
+@media only screen and (max-width: 768px) {
+    .home-2fr{
+        grid-template-columns: 1fr;
+    }
+
+    .banner img {
+        height: auto;
+        width: 15vw;
+    }
+
+    .banner {
+        height: 40vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 16px 48px;
+        padding: 16px;
+    }
+
+    .home-links {
+        display: flex;
+        position: relative;
+        left: 0px;
+        bottom: 0px;
+        margin: 16px 48px;
+        flex-direction: column;
+        gap: 4vmin;
+        width: auto;
+    }
+
+    .homel{
+        min-height: 56px;
+    }
 }

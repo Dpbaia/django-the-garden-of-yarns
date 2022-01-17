@@ -20,3 +20,35 @@
 .about-container img{
     width: auto;
 }
+
+
+@media only screen and (max-width: 1500px) {
+    .about-container {
+        grid-template-columns: 1fr 1fr;
+        height: 60vh;
+    }
+}
+
+@media only screen and (max-width: 1020px){
+    .about-container {
+        grid-template-columns: 1fr;
+        height: 60vh;
+    }
+    .about-container p{
+        font-size: 1.5vh;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .about-container img{
+        width: 100%;
+        max-height: 50vh;
+    }
+    .about-container{
+        height: 80vh;
+    }
+
+    .about-container p{
+        font-size: 1.2vh;
+    }
+}

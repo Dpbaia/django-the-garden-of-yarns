@@ -54,87 +54,13 @@ darkgreen: ##3a5f44
 
 /* Media Queries */
 
-@media only screen and (max-width: 1500px) {
-    .list-container {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    .about-container {
-        grid-template-columns: 1fr 1fr;
-        height: 60vh;
-    }
-}
-
-@media only screen and (max-width: 1250px) {
-    .list-container {
-        grid-template-columns: 1fr 1fr;
-    }
-    .slides{
-        height: auto;
-    }
-
-    .slides img{
-        height: auto;
-        width: auto;
-        max-width: 45vw;
-    }
-
-    .detail-bigimg{
-        width: auto;
-    }
-
-    .btn-banner p {
-        font-size: 2.5vw;
-    }
-}
-
-@media only screen and (max-width: 1020px){
-    .about-container {
-        grid-template-columns: 1fr;
-        height: 60vh;
-    }
-}
-
 @media only screen and (max-width: 768px) {
     body{
         padding: 0px 0px 4vh 0px;
     }
 
-    .home-2fr{
-        grid-template-columns: 1fr;
-    }
-
-    .about-container img{
-        width: 100%;
-        max-height: 50vh;
-    }
-
-    .banner img {
-        height: auto;
-        width: 15vw;
-    }
-
-    .banner {
-        height: 40vh;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin: 16px 48px;
-        padding: 16px;
-    }
-
     .navbar {
         justify-content: center;
-    }
-
-    .home-links {
-        display: flex;
-        position: relative;
-        left: 0px;
-        bottom: 0px;
-        margin: 16px 48px;
-        flex-direction: column;
-        gap: 4vmin;
-        width: auto;
     }
 
     h2 {
@@ -150,51 +76,9 @@ darkgreen: ##3a5f44
         height: 32px;
     }
 
-    .list-container {
-        grid-template-columns: 1fr;
-        grid-gap: 5vh;
-        margin: 48px 0px 0px 0px;
-    }
-
-    .about-container{
-        height: 80vh;
-    }
-
-    .about-container p{
-        font-size: 1.2vh;
-    }
-
-    .dsp-columns{
-        margin: 48px 0px 16px 0px;
-    }
-
-    .list-card {
-        width: 60vw;
-        height: 40vh;
-    }
-
-    .list-name {
-        font-size: 12px;
-        padding: 8px 0px;
-    }
-
-    .homel{
-        min-height: 56px;
-    }
-
-    .slides h2{
-        font-size: 8vw;
-    }
-
     body{
         margin:0px;
     }
 
 }
 
-@media only screen and (max-width: 500px) {
-    .slides h2 {
-        font-size: 6vw;
-        padding: 0px;
-    }
-}

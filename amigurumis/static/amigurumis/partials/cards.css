@@ -68,3 +68,19 @@
 .dsp-columns img{
     max-height: 16vh;
 }
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .list-name {
+        font-size: 12px;
+        padding: 8px 0px;
+    }
+
+    .list-card {
+        width: 60vw;
+        height: 40vh;
+    }
+}

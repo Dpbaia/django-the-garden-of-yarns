@@ -68,3 +68,37 @@
     justify-content: center;
 }
 
+
+
+@media only screen and (max-width: 1250px) {
+    .slides{
+        height: auto;
+    } 
+
+    .slides img{
+        height: auto;
+        width: auto;
+        max-width: 45vw;
+    }
+
+    .detail-bigimg{
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .slides h2{
+        font-size: 8vw;
+    }
+    .dsp-columns{
+        margin: 48px 0px 16px 0px;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .slides h2 {
+        font-size: 6vw;
+        padding: 0px;
+    }
+}
