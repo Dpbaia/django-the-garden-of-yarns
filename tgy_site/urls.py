@@ -20,6 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from amigurumis import views
 
+
 urlpatterns = [
     path('amigurumis/', include('amigurumis.urls')),
     path('admin/', admin.site.urls),

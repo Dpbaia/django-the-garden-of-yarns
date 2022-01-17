@@ -30,9 +30,9 @@ load_dotenv(find_dotenv())
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.herokuapp.com']
 
 
 # Application definition
@@ -148,6 +148,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
+# Also for protection, always must have it.
 
 STATIC_ROOT = 'static'
 STATIC_URL = '/static/'
@@ -164,3 +165,13 @@ cloudinary.config(
   api_key = os.environ["CLOUD_API_KEY"], 
   api_secret = os.environ["CLOUD_API_SECRET"] 
 )
+
+
+# PRODUCTION
+# To avoid transmitting sensitive information accidentally over the HTTP
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = True
+SECURE_HSTS_SECONDS = 31536000 # One year
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
