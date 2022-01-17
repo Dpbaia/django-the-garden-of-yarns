@@ -33,7 +33,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 DEBUG = False
 
 ALLOWED_HOSTS = ['thegardenofyarns.herokuapp.com',
-'thegardenofyarns.com']
+'www.thegardenofyarns.com']
 
 
 # Application definition
