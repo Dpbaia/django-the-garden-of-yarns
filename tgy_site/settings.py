@@ -61,9 +61,9 @@ STATICFILES_FINDERS = (
 
 # Tell another place for it to look for statics!
 
-STATICFILES_DIRS = [
-    BASE_DIR / "amigurumis/static",
-]
+# STATICFILES_DIRS = [
+#     BASE_DIR / "amigurumis/static",
+# ]
 
 COMPRESS_PRECOMPILERS = (
     ("text/x-scss", 'sass --scss'),
@@ -152,10 +152,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 # Also for protection, always must have it.
 
-STATIC_ROOT = 'static'
+STATIC_ROOT = BASE_DIR / 'amigurumis/static'
 STATIC_URL = '/static/'
-MEDIA_ROOT = 'media'
-MEDIA_URL = '/media/'
+# MEDIA_ROOT = BASE_DIR / 'static/amigurumis/'
+# MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -185,3 +185,5 @@ DATABASES['default'].update(db_from_env)
 
 # Reduce size of static files 
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+COMPRESS_ENABLED = True

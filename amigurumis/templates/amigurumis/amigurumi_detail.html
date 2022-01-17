@@ -1,7 +1,18 @@
 {% extends "base_generic.html" %}
 {% load cloudinary %}
+{% load static %}
+{% load compress %}
 
 {% block content %}
+    {% compress css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/partials/homepage.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/partials/list.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/partials/detail.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/partials/buttons.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/partials/cards.css' %}">
+    {% endcompress %}
+    
+
     <div class="margin">
         <h1 class="txt-centered list-h1">{{amigurumi}}</h1>
         <div class="list-container dsp-block">

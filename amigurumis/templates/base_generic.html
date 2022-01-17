@@ -15,8 +15,18 @@
         <link rel="shortcut icon" type="image/png" href="{% static  'amigurumis/images/favicon.ico' %}"/>
         <script src="{% static 'amigurumis/main.js' %}"></script>
         {% compress css %}
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/style.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/partials/navbar.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/partials/footer.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/partials/buttons.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/partials/index.css' %}">
+
+
+
+        
+        
         {% endcompress %}
 
         <!-- Meta tags: -->
@@ -43,7 +53,7 @@
         <div class="navbar">
             <div class="items">
                 <a href="{% url 'amigurumis:index' %}">
-                    <img src="{% static '/amigurumis/images/logo.png' %}" alt="">
+                    <img src="{% static 'amigurumis/images/logo.png' %}" alt="">
                 </a>
             </div>
             <div class="items selections">
@@ -62,7 +72,7 @@
     <div class="footer">
         <div class="items selections container-footerimg">
             <a href="#">
-                <img src="{% static '/amigurumis/images/amig3.png' %}" alt="" class="footerimg">
+                <img src="{% static 'amigurumis/images/amig3.png' %}" alt="" class="footerimg">
             </a>
         </div>
         <div class="items follow">

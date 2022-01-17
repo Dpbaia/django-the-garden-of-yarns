@@ -1,7 +1,15 @@
 {% extends "base_generic.html" %}
 {% load cloudinary %}
+{% load static %}
+{% load compress %}
 
 {% block content %}
+    {% compress css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/partials/index.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/partials/homepage.css' %}">
+    {% endcompress %}
+
+
     <div class="banner">
         <div class="banner-writing">
             <h1>The Garden of Yarns</h1>
