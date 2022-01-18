@@ -171,7 +171,7 @@ cloudinary.config(
 
 # PRODUCTION
 # To avoid transmitting sensitive information accidentally over the HTTP
-CSRF_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
 # SECURE_SSL_REDIRECT = True
 SECURE_HSTS_SECONDS = 31536000 # One year
