@@ -33,7 +33,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 DEBUG = False
 
 ALLOWED_HOSTS = ['thegardenofyarns.herokuapp.com',
-'www.thegardenofyarns.com']
+'www.thegardenofyarns.com', 'localhost']
 
 
 # Application definition
@@ -173,7 +173,7 @@ cloudinary.config(
 # To avoid transmitting sensitive information accidentally over the HTTP
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
-SECURE_SSL_REDIRECT = True
+# SECURE_SSL_REDIRECT = True
 SECURE_HSTS_SECONDS = 31536000 # One year
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_PRELOAD = True
