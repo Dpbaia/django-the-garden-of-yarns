@@ -1,42 +1,48 @@
-{% extends "base_generic.html" %}
-{% load cloudinary %}
-{% load static %}
-{% load compress %}
+<!-- prettier-ignore -->
+{% extends "base_generic.html" %} {% load cloudinary %} {% load static %}
+{% load compress %} {% block content %} {% compress css %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'amigurumis/style.css' %}"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'amigurumis/partials/index.css' %}"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'amigurumis/partials/homepage.css' %}"
+/>
+{% endcompress %}
 
-{% block content %}
-    {% compress css %}
-    <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/style.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/partials/index.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/partials/homepage.css' %}">
-    {% endcompress %}
+<div class="banner">
+  <div class="banner-writing">
+    <h1>The Garden of Yarns</h1>
+    <h2>Amigurumis made with love</h2>
+  </div>
+  <div class="bannerimage">
+    <img src="../../static/amigurumis/images/amig2.png" />
+  </div>
+</div>
 
-
-    <div class="banner">
-        <div class="banner-writing">
-            <h1>The Garden of Yarns</h1>
-            <h2>Amigurumis made with love</h2>
-            <!-- <a href="#" class="btn-banner">See my works</a> -->
-        </div>
-        <div class="bannerimage">
-            <img src="../../static/amigurumis/images/amig2.png">
-        </div>
+<div class="home-container container-lrgmargin home-links no-margin">
+  <a href="{% url 'amigurumis:list' 'true' %}">
+    <div class="homel">
+      <h2>My designs</h2>
     </div>
-
-    <div class="home-container container-lrgmargin home-links no-margin">
-        <a href="{% url 'amigurumis:list' 'true' %}">
-            <div class="homel">
-                <h2>My designs</h2>
-            </div>
-        </a>
-        <a href="{% url 'amigurumis:list' 'false' %}">
-            <div class="homel">
-                <h2>All works</h2>
-            </div>
-        </a>
-        <a href="{% url 'amigurumis:socials'%}">
-            <div class="homel">
-                <h2>Stores and Socials</h2>
-            </div>
-        </a>
+  </a>
+  <a href="{% url 'amigurumis:list' 'false' %}">
+    <div class="homel">
+      <h2>All works</h2>
     </div>
+  </a>
+  <a href="{% url 'amigurumis:socials'%}">
+    <div class="homel">
+      <h2>Stores and Socials</h2>
+    </div>
+  </a>
+</div>
 {% endblock %}

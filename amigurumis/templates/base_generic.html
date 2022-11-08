@@ -1,96 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=yes">
-        {% block title %}<title>The Garden of Yarns</title>{% endblock %}
-        <!-- Add additional CSS in static file -->
-        {% load static %}
-        {% load compress %}
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Pacifico&family=Prompt:wght@200&family=Pushster&family=Indie+Flower&family=Prompt:wght@200&display=swap" rel="stylesheet">
-        <link rel="shortcut icon" type="image/png" href="{% static  'amigurumis/images/favicon.ico' %}"/>
-        <script src="{% static 'amigurumis/main.js' %}"></script>
-        {% compress css %}
-
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/style.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/partials/navbar.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/partials/footer.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/partials/buttons.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/partials/index.css' %}">
-
-
-
-        
-        
-        {% endcompress %}
-
-        <!-- Meta tags: -->
-        <!-- Primary Meta Tags -->
-        <meta name="title" content="The Garden of Yarns">
-        <meta name="description" content="Amigurumis made with love. Catalogue of amigurumis and recipes.">
-
-        <!-- Open Graph / Facebook -->
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="www.thegardenofyarns.com">
-        <meta property="og:title" content="The Garden of Yarns">
-        <meta property="og:description" content="Amigurumis made with love. Catalogue of amigurumis and recipes.">
-        <meta property="og:image" content="{% static 'amigurumis/images/tgy_present.png' %}">
-
-        <!-- Twitter -->
-        <meta property="twitter:card" content="summary_large_image">
-        <meta property="twitter:url" content="www.thegardenofyarns.com">
-        <meta property="twitter:title" content="The Garden of Yarns">
-        <meta property="twitter:description" content="Amigurumis made with love. Catalogue of amigurumis and recipes.">
-        <meta property="twitter:image" content="{% static 'amigurumis/images/tgy_present.png' %}">
-    </head>
-    <body>
-    {% block navbar %}    
-        <div class="navbar">
-            <div class="items">
-                <a href="{% url 'amigurumis:index' %}">
-                    <img src="{% static 'amigurumis/images/logo.png' %}" alt="">
-                </a>
-            </div>
-            <div class="items selections">
-                <ul>
-                    <li>
-                        <a href="{% url 'amigurumis:about' %}" class="btn-expandgreen">
-                            About
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, maximum-scale=1, user-scalable=yes"
+    />
+    {% block title %}
+    <title>The Garden of Yarns</title>
     {% endblock %}
-    {% block content %}<!-- default content text (typically empty) -->{% endblock %}
-    {% block footer %}
+    <!-- Add additional CSS in static file -->
+    {% load static %} {% load compress %}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Handlee&family=Pacifico&family=Prompt:wght@200&family=Pushster&family=Indie+Flower&family=Prompt:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="{% static  'amigurumis/images/favicon.ico' %}"
+    />
+    <script src="{% static 'amigurumis/main.js' %}"></script>
+    {% compress css %}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'amigurumis/style.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'amigurumis/partials/navbar.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'amigurumis/partials/footer.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'amigurumis/partials/buttons.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'amigurumis/partials/index.css' %}"
+    />
+
+    {% endcompress %}
+
+    <!-- Meta tags: -->
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="The Garden of Yarns" />
+    <meta
+      name="description"
+      content="Amigurumis made with love. Catalogue of amigurumis and recipes."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="www.thegardenofyarns.com" />
+    <meta property="og:title" content="The Garden of Yarns" />
+    <meta
+      property="og:description"
+      content="Amigurumis made with love. Catalogue of amigurumis and recipes."
+    />
+    <meta
+      property="og:image"
+      content="{% static 'amigurumis/images/tgy_present.png' %}"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="www.thegardenofyarns.com" />
+    <meta property="twitter:title" content="The Garden of Yarns" />
+    <meta
+      property="twitter:description"
+      content="Amigurumis made with love. Catalogue of amigurumis and recipes."
+    />
+    <meta
+      property="twitter:image"
+      content="{% static 'amigurumis/images/tgy_present.png' %}"
+    />
+  </head>
+  <body>
+    {% block navbar %}
+    <div class="navbar">
+      <div class="items">
+        <a href="{% url 'amigurumis:index' %}">
+          <img src="{% static 'amigurumis/images/logo.png' %}" alt="" />
+        </a>
+      </div>
+      <div class="items selections">
+        <ul>
+          <li>
+            <a href="{% url 'amigurumis:about' %}" class="btn-expandgreen">
+              About
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- prettier-ignore -->
+    {% endblock %} {% block content %}<!-- default content text (typically empty) -->
+    {% endblock %} {% block footer %}
     <div class="footer">
-        <div class="items selections container-footerimg">
-            <a href="#">
-                <img src="{% static 'amigurumis/images/amig3.png' %}" alt="" class="footerimg">
-            </a>
-        </div>
-        <div class="items follow">
-            Follow us: 
-            <a href="https://www.etsy.com/shop/thegardenofyarns" target=”_blank”>
-                <img src="https://cdn-icons-png.flaticon.com/512/174/174847.png" alt="etsy" class="icon">
-            </a>
-            <a href="https://www.instagram.com/thegardenofyarns/" target=”_blank”>
-                <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="instagram" class="icon">
-            </a>
-            <a href="https://pt-br.facebook.com/thegardenofyarns/" target=”_blank”>
-                <img src="https://cdn-icons-png.flaticon.com/512/59/59439.png" alt="facebook" class="icon">
-            </a>
-            <a href="https://www.elo7.com.br/thegardenofyarns" target=”_blank”>
-                <img src="https://theme.zdassets.com/theme_assets/121966/83b9c2815f9ecb66b92d450d6f20752321b8ea78.png" alt="elo7" class="icon">
-            </a>
-        </div>
+      <div class="items selections container-footerimg">
+        <a href="#">
+          <img
+            src="{% static 'amigurumis/images/amig3.png' %}"
+            alt=""
+            class="footerimg"
+          />
+        </a>
+      </div>
+      <div class="items follow">
+        Follow us:
+        <a href="https://www.etsy.com/shop/thegardenofyarns" target="”_blank”">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/174/174847.png"
+            alt="etsy"
+            class="icon"
+          />
+        </a>
+        <a href="https://www.instagram.com/thegardenofyarns/" target="”_blank”">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/174/174855.png"
+            alt="instagram"
+            class="icon"
+          />
+        </a>
+        <a
+          href="https://pt-br.facebook.com/thegardenofyarns/"
+          target="”_blank”"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/59/59439.png"
+            alt="facebook"
+            class="icon"
+          />
+        </a>
+        <a href="https://www.elo7.com.br/thegardenofyarns" target="”_blank”">
+          <img
+            src="https://theme.zdassets.com/theme_assets/121966/83b9c2815f9ecb66b92d450d6f20752321b8ea78.png"
+            alt="elo7"
+            class="icon"
+          />
+        </a>
+      </div>
     </div>
     {% endblock %}
-    </body>
+  </body>
 </html>

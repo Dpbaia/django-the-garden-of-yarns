@@ -1,30 +1,48 @@
-{% extends "base_generic.html" %}
-{% load cloudinary %}
-{% load static %}
-{% load compress %}
+<!-- prettier-ignore -->
+{% extends "base_generic.html" %} {% load cloudinary %} {% load static %}
+{% load compress %} {% block content %} {% compress css %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'amigurumis/style.css' %}"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'amigurumis/partials/index.css' %}"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'amigurumis/partials/homepage.css' %}"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'amigurumis/partials/list.css' %}"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'amigurumis/partials/about.css' %}"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'amigurumis/partials/cards.css' %}"
+/>
+{% endcompress %}
 
-{% block content %}
-    {% compress css %}
-    <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/style.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/partials/index.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/partials/homepage.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/partials/list.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/partials/about.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/partials/cards.css' %}">
-    {% endcompress %}
-    
-    <div class="margin">
-        <h1 class="txt-centered list-h1">About</h1>
-        <div class="list-container about-container">
-            <div>
-                {% cloudinary about.photo format="png" height=300 width="280" crop="fit" class="img-fillfit"%}
-                
-            </div>
-            <div>
-                <p>
-                    {{about.description|linebreaks }}
-                </p>
-            </div>
-        </div>
+<div class="margin">
+  <h1 class="txt-centered list-h1">About</h1>
+  <div class="list-container about-container">
+    <div>
+      <!-- prettier-ignore -->
+      {% cloudinary about.photo format="png" height=300 width="280" crop="fit" class="img-fillfit"%}
     </div>
+    <div>
+      <p>{{about.description|linebreaks }}</p>
+    </div>
+  </div>
+</div>
 {% endblock %}

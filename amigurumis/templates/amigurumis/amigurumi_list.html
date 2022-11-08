@@ -1,34 +1,49 @@
-{% extends "base_generic.html" %}
-{% load cloudinary %}
-{% load static %}
-{% load compress %}
+<!-- prettier-ignore -->
+{% extends "base_generic.html" %} {% load cloudinary %} {% load static %}
+{% load compress %} {% block content %} {% compress css %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'amigurumis/style.css' %}"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'amigurumis/partials/homepage.css' %}"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'amigurumis/partials/list.css' %}"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'amigurumis/partials/detail.css' %}"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'amigurumis/partials/cards.css' %}"
+/>
+{% endcompress %}
 
-{% block content %}
-    {% compress css %}
-    <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/style.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/partials/homepage.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/partials/list.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/partials/detail.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/partials/cards.css' %}">
-    {% endcompress %}
-
-    <div class="margin">
-        <h1 class="txt-centered list-h1">{{page_name}}</h1>
-        {% if amigurumi_list %}
-        <div class="home-container list-container container-lrgmargin">
-            {% for amigurumi in amigurumi_list %}
-                <a href="{{ amigurumi.get_absolute_url }}" class="list-link">
-                    <div class="list-card">
-                        {% cloudinary amigurumi.images.first.image format="png" height=300 width="280" crop="fit" class="img-fillfit"%}
-                        <div class="list-name">
-                            {{ amigurumi.name }}
-                        </div>
-                    </div>
-                </a>
-            {% endfor %}
-        </div>
-        {% else %}
-        <p>There are no amigurumis present.</p>
-        {% endif %}
-    </div>
+<div class="margin">
+  <h1 class="txt-centered list-h1">{{page_name}}</h1>
+  {% if amigurumi_list %}
+  <div class="home-container list-container container-lrgmargin">
+    {% for amigurumi in amigurumi_list %}
+    <a href="{{ amigurumi.get_absolute_url }}" class="list-link">
+      <div class="list-card">
+        <!-- prettier-ignore -->
+        {% cloudinary amigurumi.images.first.image format="png" height=300 width="280" crop="fit" class="img-fillfit"%}
+        <div class="list-name">{{ amigurumi.name }}</div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p>There are no amigurumis present.</p>
+  {% endif %}
+</div>
 {% endblock %}

@@ -1,25 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="viewport" content="initial-scale=1.0, width=device-width">
-        {% block title %}<title>The Garden of Yarns</title>{% endblock %}
-        <!-- Add additional CSS in static file -->
-        {% load static %}
-        {% load compress %}
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Pacifico&family=Prompt:wght@200&family=Pushster&family=Indie+Flower&family=Prompt:wght@200&display=swap" rel="stylesheet">
-        <link rel="shortcut icon" type="image/png" href="{% static  'amigurumis/images/favicon.ico' %}"/>
-        {% compress css %}
-        <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/style.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/partials/error.css' %}">
-        {% endcompress %}
-    </head>
-    <body class="error">
-        {% block content %}<!-- default content text (typically empty) -->{% endblock %}
-        
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    {% block title %}
+    <title>The Garden of Yarns</title>
+    {% endblock %}
+    <!-- Add additional CSS in static file -->
+    {% load static %} {% load compress %}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Handlee&family=Pacifico&family=Prompt:wght@200&family=Pushster&family=Indie+Flower&family=Prompt:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="{% static  'amigurumis/images/favicon.ico' %}"
+    />
+    {% compress css %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'amigurumis/style.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'amigurumis/partials/error.css' %}"
+    />
+    {% endcompress %}
+  </head>
+  <body class="error">
+    <!-- prettier-ignore -->
+    {% block content %}<!-- default content text (typically empty) -->
+    {% endblock %}
+  </body>
 </html>

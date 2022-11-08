@@ -1,51 +1,83 @@
-{% extends "base_generic.html" %}
-{% load cloudinary %}
-{% load static %}
-{% load compress %}
+<!-- prettier-ignore -->
+{% extends "base_generic.html" %} {% load cloudinary %} {% load static %}
+{% load compress %} {% block content %} {% compress css %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'amigurumis/style.css' %}"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'amigurumis/partials/homepage.css' %}"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'amigurumis/partials/list.css' %}"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'amigurumis/partials/detail.css' %}"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'amigurumis/partials/buttons.css' %}"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'amigurumis/partials/cards.css' %}"
+/>
+{% endcompress %}
 
-{% block content %}
-    {% compress css %}
-    <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/style.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/partials/homepage.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/partials/list.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/partials/detail.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/partials/buttons.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'amigurumis/partials/cards.css' %}">
-    {% endcompress %}
-    
-
-    <div class="margin">
-        <h1 class="txt-centered list-h1">{{amigurumi}}</h1>
-        <div class="list-container dsp-block">
-            <div class="container">
-                <!-- Sliding images! -->
-                <div class="slides">
-                        <h2 class="d-arrow homel" id="left-arrow" onclick="leftArrowChangeImage();"><</h2>
-                        <div class="detail-bigimg">
-                            {% cloudinary amigurumi.images.first.image height="360" width="360" format="png" crop="fit" id="slideshow" %}
-                        </div>
-                        <h2 class="d-arrow homel" id="right-arrow" onclick="rightArrowChangeImage();">></h2>
-                </div>
-
-            </div>
-            <!-- The expanding image container -->
-            <div class="home-container list-container container-lrgmargin dsp-columns">
-                {% for image in amigurumi.images.all %}
-                <!-- Code carrossel here later -->
-                    {% if forloop.first %}
-                        <div class={{forloop.counter}}>
-                            {% cloudinary image.image format="png" crop="fit" height="360" width="360" onclick="changeImage(this);" class="homel img-active img-slide" %}
-                        </div>
-                    {% else %}
-                        <div class={{forloop.counter}}>
-                            {% cloudinary image.image format="png" crop="fit" height="360" width="360" onclick="changeImage(this);" class="homel img-slide" %}
-                        </div>
-                    {%endif%}
-                {% endfor %}
-            </div>
-            {% if amigurumi.url %}
-                <a href="{{amigurumi.url}}" target=”_blank” class="homel btn-detail">Buy pattern here!</a>
-            {% endif %}
+<div class="margin">
+  <h1 class="txt-centered list-h1">{{amigurumi}}</h1>
+  <div class="list-container dsp-block">
+    <div class="container">
+      <!-- Sliding images -->
+      <div class="slides">
+        <h2
+          class="d-arrow homel"
+          id="left-arrow"
+          onclick="leftArrowChangeImage();"
+        >
+          <
+        </h2>
+        <div class="detail-bigimg">
+          <!-- prettier-ignore -->
+          {% cloudinary amigurumi.images.first.image height="360" width="360" format="png" crop="fit" id="slideshow" %}
         </div>
+        <h2
+          class="d-arrow homel"
+          id="right-arrow"
+          onclick="rightArrowChangeImage();"
+        >
+          >
+        </h2>
+      </div>
     </div>
+    <!-- The expanding image container -->
+    <div class="home-container list-container container-lrgmargin dsp-columns">
+      {% for image in amigurumi.images.all %} {% if forloop.first %}
+      <div class="{{forloop.counter}}">
+        <!-- prettier-ignore -->
+        {% cloudinary image.image format="png" crop="fit" height="360" width="360" onclick="changeImage(this);" class="homel img-active img-slide" %}
+      </div>
+      {% else %}
+      <div class="{{forloop.counter}}">
+        <!-- prettier-ignore -->
+        {% cloudinary image.image format="png" crop="fit" height="360" width="360" onclick="changeImage(this);" class="homel img-slide" %}
+      </div>
+      {%endif%} {% endfor %}
+    </div>
+    {% if amigurumi.url %}
+    <a href="{{amigurumi.url}}" target="”_blank”" class="homel btn-detail"
+      >Buy pattern here!</a
+    >
+    {% endif %}
+  </div>
+</div>
 {% endblock %}
