@@ -55,4 +55,4 @@ ENTRYPOINT [ "/render/setup-env" ]
 # You may override the process type that is run by replacing 'web' with another
 # process type name in the CMD line below. That process type must have been
 # defined in the app's Procfile during build.
-CMD [ "gunicorn tgy_site.wsgi --log-file -" ]
+CMD [ "gunicorn", "tgy_site.wsgi:application", "--log-file", "-", "--bind" "0.0.0.0:8080"]
