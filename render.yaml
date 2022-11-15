@@ -11,10 +11,10 @@ services:
     envVars:
       - key: DATABASE_URL # Render PostgreSQL database
         fromDatabase:
-          name: db
+          name: postgresql-rectangular-78179
           property: connectionString
 
 databases: # Render PostgreSQL database
-  - name: db
+  - name: postgresql-rectangular-78179
     ipAllowList: [] # only allow internal connections
     plan: free
