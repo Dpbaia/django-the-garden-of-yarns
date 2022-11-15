@@ -8,15 +8,13 @@ services:
     dockerfilePath: Dockerfile.render
     plan: free # optional; defaults to starter
     numInstances: 1
-    domains: # custom domains
-      - "www.thegardenofyarns.com"
     envVars:
       - key: DATABASE_URL # Render PostgreSQL database
         fromDatabase:
-          name: postgresql-rectangular-78179
+          name: db
           property: connectionString
 
 databases: # Render PostgreSQL database
-  - name: postgresql-rectangular-78179
+  - name: db
     ipAllowList: [] # only allow internal connections
     plan: free
